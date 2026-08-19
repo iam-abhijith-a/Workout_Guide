@@ -1,0 +1,19 @@
+# Generated from the exercises-dataset submodule by tools/build_data.py and
+# tools/build_media.py. The media is (c) Gym visual and is not redistributed here.
+app/assets/data/
+app/assets/anim/
+app/assets/thumb/
+
+# Local review screenshots
+review/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+.claude/

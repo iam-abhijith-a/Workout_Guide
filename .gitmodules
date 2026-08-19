@@ -1,0 +1,3 @@
+[submodule "exercises-dataset"]
+	path = exercises-dataset
+	url = https://github.com/hasaneyldrm/exercises-dataset.git
