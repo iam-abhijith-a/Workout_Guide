@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plain white, matching FColors.canvas, so the launch window flows straight
+     into the splash the app draws rather than flashing a different colour. The
+     mark is deliberately not drawn here: the app animates it in from nothing,
+     and a static copy would appear, vanish, then redraw itself. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+</layer-list>
