@@ -1,11 +1,12 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:workout_guide/data/models/exercise.dart';
 import 'package:workout_guide/data/models/plan.dart';
 import 'package:workout_guide/data/models/profile.dart';
 import 'package:workout_guide/data/plan/plan_generator.dart';
+
+import 'support/test_harness.dart';
 
 /// The plan generator is the one piece of this app that can quietly do harm: a
 /// bad plan puts a novice under a barbell they cannot handle, or hands someone
@@ -16,10 +17,7 @@ void main() {
   late List<Exercise> library;
 
   setUpAll(() {
-    final raw = File('assets/data/exercises.json').readAsStringSync();
-    library = (jsonDecode(raw) as List)
-        .map((e) => Exercise.fromJson(e as Map<String, dynamic>))
-        .toList();
+    library = loadLibrary();
   });
 
   test('library loads and every record is usable', () {

@@ -1,6 +1,3 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -26,12 +23,7 @@ void main() {
   late ExerciseRepository repo;
 
   setUpAll(() {
-    final raw = File('assets/data/exercises.json').readAsStringSync();
-    repo = ExerciseRepository.fromExercises(
-      (jsonDecode(raw) as List)
-          .map((e) => Exercise.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+    repo = ExerciseRepository.fromExercises(loadLibrary());
   });
 
   Future<ProviderContainer> harness({
