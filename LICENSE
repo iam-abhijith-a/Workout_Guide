@@ -1,3 +1,15 @@
+This licence covers the Workout Guide app itself: the Flutter frontend under
+app/ and the build scripts under tools/.
+
+It does NOT cover the exercise data or media. Those come from the separate
+exercises-dataset repository (https://github.com/hasaneyldrm/exercises-dataset),
+referenced here only as a git submodule, and remain under the licences set out
+in that repository: the MIT License for the data, and the Gym visual media terms
+(https://gymvisual.com/) described in its NOTICE.md. Nothing in this file grants
+any rights to that data or media. See NOTICE.md for details.
+
+---
+
 MIT License
 
 Copyright (c) 2026 Abhijith
